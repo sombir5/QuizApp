@@ -21,7 +21,7 @@ const quizGame = async (req, res) => {
         difficulty: difficulty,
       })
         .skip((page - 1) * limit)
-        .limit(questions);
+        .limit(limit);
 
       console.log(question);
  return res.send({ data: question, totalPages: questions});
